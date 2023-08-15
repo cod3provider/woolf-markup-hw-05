@@ -759,10 +759,10 @@ button {
     outline: transparent;
     resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    &:focus {
-        border-color: #4D5AE5;
-    }
+.modal_textarea:focus {
+    border-color: #4D5AE5;
 }
 
 .checkbox_wrapper {
@@ -780,7 +780,6 @@ button {
 }
 
 .checkbox {
-    display: inline-flex;
     justify-content: center;
     align-items: center;
     margin-right: 8px;
@@ -792,6 +791,7 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
 }
 
 .modal_privacy_checkbox {
