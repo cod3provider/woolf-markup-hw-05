@@ -571,17 +571,18 @@ button {
 .footer_form_input {
     padding: 8px 16px;
     width: 264px;
-    color: #FFF;
+    height: 40px;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     border-radius: 4px;
+    color: #FFF;
     background-color: transparent;
     outline: none;
     border: 1px solid #FFF;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer_form_input::placeholder {
@@ -592,8 +593,9 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
     padding: 8px 24px;
+    min-width: 165px;
+    height: 40px;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -611,6 +613,7 @@ button {
 }
 
 .footer_form_btn_icon {
+    margin-left: 16px;
     color: #FFFFFF;
 }
 
@@ -684,22 +687,25 @@ button {
 
 .modal_form_title {
     margin-bottom: 16px;
-    color: #2E2F42;
-    text-align: center;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--card-title-color);
 }
 
 .label_wrap {
-    color: var(--modal-text-color);
     margin-bottom: 8px;
 }
 
 .modal_form_label {
     display: block;
     margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--modal-text-color);
 }
 
 .label_wrap_comment {
@@ -710,13 +716,14 @@ button {
 .modal_input {
     width: 100%;
     height: 40px;
-    padding: 8px 16px 8px 38px;
+    padding-left: 38px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    border: 1px solid rgba(46, 47, 66, 0.40);
+    background-color: transparent;
+    outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:focus {
-        outline: none;
         border-color: var(--input-active-color);
     }
 
@@ -726,9 +733,7 @@ button {
 }
 
 .modal_input_wrap {
-    display: block;
     position: relative;
-    margin-top: 4px;
 }
 
 .modal_input_icon {
@@ -740,24 +745,22 @@ button {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal_input.modal_textarea {
+.modal_textarea {
     padding: 8px 16px;
     width: 100%;
-    min-height: 120px;
-    font-weight: 400;
+    height: 120px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
     outline: transparent;
     resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: rgba(46, 47, 66, 0.4);
-    background-color: transparent;
 
     &:focus {
-        outline: none;
         border-color: #4D5AE5;
     }
 }
@@ -770,13 +773,16 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     color: var(--modal-text-color);
 }
 
 .checkbox {
     display: inline-flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-right: 8px;
     width: 16px;
     height: 16px;
@@ -788,18 +794,18 @@ button {
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal_privacy_checkbox {
+    margin-right: 8px;
+}
+
 .modal_privacy_checkbox:checked + .modal_privacy .checkbox {
     background-color: var(--link-color-hover);
     border: none;
     fill: var(--filter-bg-color);
 }
 
-.modal_privacy_checkbox {
-    margin-right: 8px;
-}
-
 .modal_privacy_link {
-    color: var(--nav-link-color);
+    color: var(--filter-text-color);
 }
 
 .modal_form_send_button {
@@ -807,6 +813,8 @@ button {
     margin: 0 auto;
     padding: 16px 32px;
     min-width: 169px;
+    height: 56px;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -814,7 +822,8 @@ button {
     color: #FFFFFF;
     border-radius: 4px;
     border: none;
-    background: var(--btn-bg-color);
+    cursor: pointer;
+    background-color: var(--btn-bg-color);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
